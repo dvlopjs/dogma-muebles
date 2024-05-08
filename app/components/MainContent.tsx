@@ -23,7 +23,7 @@ export const MainContent: React.FC = () => {
         style={{
           paddingTop: 10,
           //   fontFamily: "Arial, sans-serif",
-          color: "#40916c",
+          color: "#52b788",
           textShadow: "4px 4px 9px rgba(0, 0, 0, 0.7)",
         }}
       >

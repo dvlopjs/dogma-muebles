@@ -20,7 +20,7 @@ const themeOptions: ThemeOptions = {
   palette: {
     mode: "dark",
     primary: {
-      main: "#40916c",
+      main: "#52b788",
     },
     // secondary: {
     //   main: "#B99470",
