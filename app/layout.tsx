@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+
+import ThemeRegistry from "./theme/ThemeRegistry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+        <ThemeRegistry>
+          <body>
+            <main
+              style={{
+                paddingTop: 10,
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
+              }}
+            >
+              <Header />
+
+              {children}
+            </main>
+          </body>
+        </ThemeRegistry>
+      </AppRouterCacheProvider>
     </html>
   );
 }
