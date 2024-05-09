@@ -1,7 +1,6 @@
 "use client";
 import { Box, Button, Typography } from "@mui/material";
-import Link from "next/link";
-
+import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
 export const MainContent: React.FC = () => {
@@ -37,10 +36,25 @@ export const MainContent: React.FC = () => {
       <Box pt={5} display={"flex"} justifyContent={"center"}>
         <Button
           variant="contained"
-          style={{ color: "#fff" }}
+          // style={{ color: "#fff" }}
+          sx={{
+            color: "#fff",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
           onClick={() => scrollSmooth("#cocinas")}
         >
-          VER MUEBLES
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignContent={"center"}
+            gap={1}
+          >
+            VER MUEBLES
+            <ExpandCircleDownIcon />
+          </Box>
         </Button>
       </Box>
     </>

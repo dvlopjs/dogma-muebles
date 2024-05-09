@@ -32,3 +32,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #52b788 !important;
+}
+
+.custom-swiper-button-prev {
+  color: #52b788 !important;
+}
+
+.custom-swiper-button-next {
+  color: #52b788 !important;
+}

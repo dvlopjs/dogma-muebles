@@ -1,18 +1,20 @@
-import { Grid, Typography } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import { ImageModel } from "@/app/assets/images/images";
+import { Grid } from "@mui/material";
+
+import Slide from "../Slide";
 
 type Props = {
   inverted?: boolean | false;
-  urlImage: StaticImageData;
   text: React.ReactElement;
   id?: string | undefined;
+  images: ImageModel[];
 };
 
 export const SectionContent: React.FC<Props> = ({
   inverted,
-  urlImage,
   text,
   id,
+  images,
 }) => {
   return (
     <div id={id}>
@@ -20,7 +22,7 @@ export const SectionContent: React.FC<Props> = ({
         {inverted ? (
           <>
             <Grid item xs={12} sm={6}>
-              <Image src={urlImage} alt="img" />
+              <Slide images={images} />
             </Grid>
             <Grid item xs={12} sm={6}>
               {text}
@@ -32,7 +34,7 @@ export const SectionContent: React.FC<Props> = ({
               {text}
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Image src={urlImage} alt="img" />
+              <Slide images={images} />
             </Grid>
           </>
         )}
