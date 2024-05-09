@@ -1,7 +1,8 @@
 import { ImageModel } from "@/app/assets/images/images";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 import Slide from "../Slide";
+import { SeeMoreButton } from "../SeeMoreButton";
 
 type Props = {
   inverted?: boolean | false;
@@ -26,12 +27,18 @@ export const SectionContent: React.FC<Props> = ({
             </Grid>
             <Grid item xs={12} sm={6}>
               {text}
+              <Box pt={3}>
+                <SeeMoreButton />
+              </Box>
             </Grid>
           </>
         ) : (
           <>
             <Grid item xs={12} sm={6}>
               {text}
+              <Box pt={3}>
+                <SeeMoreButton />
+              </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Slide images={images} />

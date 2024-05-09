@@ -4,33 +4,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ImageModel } from "../assets/images/images";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 
 type PropsSlide = {
   images: ImageModel[];
 };
 
 export default function Slide({ images }: PropsSlide) {
-  const renderCustomPrevButton = () => (
-    <div className="swiper-button-prev">
-      <ArrowBackIosIcon />
-    </div>
-  );
-
-  const renderCustomNextButton = () => (
-    <div className="swiper-button-next">
-      <ArrowForwardIosIcon />
-    </div>
-  );
-
   return (
     <section className="py-12">
-      <div className="container">
+      <div className="swiper-container">
         <Swiper
           grabCursor
-          modules={[Pagination, Scrollbar, A11y]}
+          autoplay={{ delay: 3000 }}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           pagination={{ type: "bullets", clickable: true }}
           className="h-120 w-full rounded-lg"
         >

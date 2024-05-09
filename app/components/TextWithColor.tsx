@@ -23,14 +23,13 @@ export const TextWithColor: React.FC<Props> = ({
       </Typography>{" "}
       <br />
       <ReactTyped
-        typeSpeed={40}
-        backSpeed={30}
+        typeSpeed={50}
+        backSpeed={35}
         style={{
           color: " #52b788",
           fontSize: "2rem",
           textShadow: "0 0 5px #52b788, 0 0 15px #52b788, 0 0 20px #52b788",
         }}
-        loop
         strings={[textColored]}
       ></ReactTyped>
     </Box>

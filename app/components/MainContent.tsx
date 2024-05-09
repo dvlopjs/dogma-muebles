@@ -3,6 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
+import { ReactTyped } from "react-typed";
 export const MainContent: React.FC = () => {
   return (
     <>
@@ -30,7 +31,14 @@ export const MainContent: React.FC = () => {
           textShadow: "4px 4px 9px rgba(0, 0, 0, 0.7)",
         }}
       >
-        Descubrí muebles únicos para tu hogar.
+        Descubrí muebles{" "}
+        <ReactTyped
+          strings={["únicos", "a medida"]}
+          loop
+          typeSpeed={60}
+          backSpeed={40}
+        />{" "}
+        para tu hogar.
       </Typography>
 
       <Box pt={5} display={"flex"} justifyContent={"center"}>

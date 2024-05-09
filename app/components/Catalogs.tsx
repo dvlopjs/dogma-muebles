@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import { SectionContent } from "./SectionContent";
 import { TextWithColor } from "./TextWithColor";
 import cocinaImg from "../assets/images/cocinas/cocina1.jpg";
@@ -19,7 +19,7 @@ export const Catalogs: React.FC = () => {
         id={"#cocinas"}
       />
 
-      <Box mt={30}>
+      <Box mt={20}>
         <SectionContent
           inverted={true}
           images={images.habitaciones}
@@ -32,7 +32,7 @@ export const Catalogs: React.FC = () => {
         />
       </Box>
 
-      <Box mt={30}>
+      <Box mt={20}>
         <SectionContent
           images={images.otros}
           text={

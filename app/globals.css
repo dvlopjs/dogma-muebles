@@ -44,3 +44,11 @@ body {
 .custom-swiper-button-next {
   color: #52b788 !important;
 }
+
+.swiper-container {
+  border: 2px solid #ffffff !important; /* Cambia el color y el grosor del borde según tus preferencias */
+  border-radius: 20px !important; /* Ajusta el radio de borde según sea necesario */
+  overflow: hidden !important; /* Asegúrate de que el contenido no sobresalga del borde */
+
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
