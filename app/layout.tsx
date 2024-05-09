@@ -29,9 +29,12 @@ export default function RootLayout({
                 display: "flex",
                 flexDirection: "column",
                 minHeight: "100vh",
+                paddingBottom: 10,
               }}
             >
-              <Header />
+              <Header>
+                <></>
+              </Header>
 
               {children}
             </main>

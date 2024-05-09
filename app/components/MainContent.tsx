@@ -1,10 +1,14 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+"use client";
+import { Box, Button, Typography } from "@mui/material";
+import Link from "next/link";
 
+import React from "react";
+import { scrollSmooth } from "../utils/scrollSmooth";
 export const MainContent: React.FC = () => {
   return (
     <>
       <Typography
+        pt={10}
         align="center"
         variant="h3"
         fontWeight="bold"
@@ -29,6 +33,16 @@ export const MainContent: React.FC = () => {
       >
         Descubrí muebles únicos para tu hogar.
       </Typography>
+
+      <Box pt={5} display={"flex"} justifyContent={"center"}>
+        <Button
+          variant="contained"
+          style={{ color: "#fff" }}
+          onClick={() => scrollSmooth("#cocinas")}
+        >
+          VER MUEBLES
+        </Button>
+      </Box>
     </>
   );
 };
