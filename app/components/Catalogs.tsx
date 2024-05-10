@@ -7,7 +7,7 @@ import Template from "../utils/template";
 
 export const Catalogs: React.FC = () => {
   return (
-    <Box mt={30}>
+    <Box mt={30} id="#cocinas">
       <Template>
         <SectionContent
           images={images.cocinas}
@@ -17,7 +17,6 @@ export const Catalogs: React.FC = () => {
               textColored="sobre cocinas... "
             />
           }
-          id={"#cocinas"}
         />
       </Template>
       <Box mt={20}>
