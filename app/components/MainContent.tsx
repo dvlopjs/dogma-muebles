@@ -1,18 +1,22 @@
 "use client";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
 import { ReactTyped } from "react-typed";
+import { useMediasQuerys } from "../utils/useMediasQuerys";
 export const MainContent: React.FC = () => {
+  const { downSm } = useMediasQuerys();
+
   return (
     <>
       <Typography
         pt={10}
         align="center"
-        variant="h3"
+        variant="h1"
         fontWeight="bold"
         style={{
+          fontSize: downSm ? "2.5rem" : "3rem",
           color: "white",
           textShadow: "4px 4px 9px rgba(0, 0, 0, 0.7)",
         }}
@@ -26,7 +30,8 @@ export const MainContent: React.FC = () => {
         fontWeight="bold"
         style={{
           paddingTop: 10,
-          //   fontFamily: "Arial, sans-serif",
+          fontSize: downSm ? "1rem" : "1.5rem",
+
           color: "#52b788",
           textShadow: "4px 4px 9px rgba(0, 0, 0, 0.7)",
         }}

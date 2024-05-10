@@ -17,6 +17,7 @@ const themeOptions: ThemeOptions = {
   typography: {
     fontFamily: dancingScriptCursiva.style.fontFamily,
   },
+
   palette: {
     mode: "dark",
     primary: {
