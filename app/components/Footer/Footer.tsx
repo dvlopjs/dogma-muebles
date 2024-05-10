@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           Seguinos en <ButtonsRedes />
         </div>
         <div className="flex justify-center text-center items-center pt-3">
-          <p className="text-sm">
+          <p className="text-sm text-center">
             &copy; 2024 DogmaInc. Todos los derechos reservados.
           </p>
         </div>
