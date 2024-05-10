@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Divider, Typography, useMediaQuery } from "@mui/material";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
