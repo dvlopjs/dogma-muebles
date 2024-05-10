@@ -11,12 +11,15 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 type PropsSlide = {
   images: ImageModel[];
 };
 
 export default function Slide({ images }: PropsSlide) {
+  const theme = useTheme();
+  const xs = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <section className="py-12">
       <div className="swiper-container">
@@ -31,7 +34,7 @@ export default function Slide({ images }: PropsSlide) {
           {images.map((image, index) => (
             <SwiperSlide key={index} virtualIndex={index}>
               <div
-                style={{ height: "700px" }}
+                style={{ height: xs ? "500px" : "700px" }}
                 className="flex w-full items-center justify-center"
               >
                 <Image
