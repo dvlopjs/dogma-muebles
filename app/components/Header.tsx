@@ -18,6 +18,7 @@ import Image from "next/image";
 import appLogo from "../assets/images/dogma-logo.jpg";
 import { Container, Slide, useScrollTrigger } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { sendToChat } from "../utils/sendToChat";
 
 interface Props {
   /**
@@ -108,6 +109,7 @@ export default function Header(props: Props) {
                 item === "Contactanos" ? (
                   <Box key={item} pl={2}>
                     <Button
+                      onClick={() => sendToChat()}
                       startIcon={<WhatsAppIcon />}
                       variant="outlined"
                       color="success"

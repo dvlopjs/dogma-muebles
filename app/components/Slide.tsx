@@ -23,14 +23,15 @@ export default function Slide({ images }: PropsSlide) {
         <Swiper
           grabCursor
           autoplay={{ delay: 3000 }}
+          navigation
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           pagination={{ type: "bullets", clickable: true }}
-          className="h-120 w-full rounded-lg"
+          className="h-160 w-full rounded-lg"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} virtualIndex={index}>
               <div
-                style={{ height: "600px" }}
+                style={{ height: "700px" }}
                 className="flex w-full items-center justify-center"
               >
                 <Image
