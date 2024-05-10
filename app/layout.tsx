@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 
 import ThemeRegistry from "./theme/ThemeRegistry";
+import { Footer } from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,6 @@ export default function RootLayout({
                 display: "flex",
                 flexDirection: "column",
                 minHeight: "100vh",
-                paddingBottom: 10,
               }}
             >
               <Header>
@@ -37,6 +37,7 @@ export default function RootLayout({
               </Header>
 
               {children}
+              <Footer />
             </main>
           </body>
         </ThemeRegistry>
