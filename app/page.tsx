@@ -3,12 +3,14 @@ import { MainContent } from "./components/MainContent";
 import Template from "./utils/template";
 
 import { Catalogs } from "./components/Catalogs";
+import Animate from "./utils/animate";
 
 export default function Home() {
   return (
     <Container>
-      <Template>
+      <Animate>
         <MainContent />
+
         <Box pt={10}>
           <Divider
             sx={{
@@ -19,8 +21,8 @@ export default function Home() {
             }}
           />
         </Box>
-        <Catalogs />
-      </Template>
+      </Animate>
+      <Catalogs />
     </Container>
   );
 }
