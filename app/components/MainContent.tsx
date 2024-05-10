@@ -11,7 +11,7 @@ export const MainContent: React.FC = () => {
   return (
     <>
       <Typography
-        pt={10}
+        pt={20}
         align="center"
         variant="h1"
         fontWeight="bold"

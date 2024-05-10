@@ -44,3 +44,27 @@ export const images: { [key: string]: ImageModel[] } = {
     { src: otros2, alt: "Otros2" },
   ],
 };
+
+// Nuevo array de imágenes estructurado por trabajos
+export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
+  cocinas: {
+    trabajo1: [
+      { src: cocina1, alt: "Trabajo 1 - Cocina1" },
+      { src: cocina2, alt: "Trabajo 1 - Cocina2" },
+      { src: cocina3, alt: "Trabajo 2 - Cocina3" },
+    ],
+    trabajo2: [
+      { src: cocina4, alt: "Trabajo 2 - Cocina3" },
+      { src: cocina5, alt: "Trabajo 2 - Cocina4" },
+      { src: cocina6, alt: "Trabajo 2 - Cocina4" },
+      { src: cocina7, alt: "Trabajo 2 - Cocina4" },
+    ],
+    // Agrega más trabajos según sea necesario
+  },
+  habitaciones: {
+    // Aquí puedes estructurar los trabajos de habitaciones de manera similar si es necesario
+  },
+  otros: {
+    // Aquí puedes estructurar los trabajos de otros de manera similar si es necesario
+  },
+};
