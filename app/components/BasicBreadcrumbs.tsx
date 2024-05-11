@@ -14,7 +14,15 @@ export default function BasicBreadcrumbs({ text }: Props) {
           Inicio
         </Link>
 
-        <Typography sx={{ color: "#52b788" }}>{text}</Typography>
+        <Typography
+          sx={{
+            color: "#52b788",
+            textShadow: "0 0 10px #52b788",
+            fontWeight: "bold",
+          }}
+        >
+          {text}
+        </Typography>
       </Breadcrumbs>
     </div>
   );

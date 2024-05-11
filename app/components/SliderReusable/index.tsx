@@ -22,12 +22,12 @@ export default function SliderReusable({ images }: PropsSlide) {
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <section className="py-12">
+    <section style={{ paddingTop: 15, paddingBottom: 15 }}>
       <div className="swiper-container">
         <Swiper
           grabCursor
           navigation
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           pagination={{ type: "bullets", clickable: true }}
           className="h-full w-full rounded-lg"
         >
@@ -35,7 +35,7 @@ export default function SliderReusable({ images }: PropsSlide) {
             <SwiperSlide key={index} virtualIndex={index}>
               <div
                 style={{ height: xs ? "500px" : "700px" }}
-                className="flex w-full items-center justify-center"
+                className="flex w-full  items-center justify-center"
               >
                 <Image
                   src={image.src}

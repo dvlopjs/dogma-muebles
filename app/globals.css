@@ -55,7 +55,6 @@ body {
 } */
 
 .swiper-container {
-  border: 2px solid #ffffff !important; /* Cambia el color y el grosor del borde según tus preferencias */
   border-radius: 20px !important; /* Ajusta el radio de borde según sea necesario */
   overflow: hidden !important; /* Asegúrate de que el contenido no sobresalga del borde */
 

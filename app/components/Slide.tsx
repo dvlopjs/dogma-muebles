@@ -25,7 +25,7 @@ export default function Slide({ images }: PropsSlide) {
       <div className="swiper-container">
         <Swiper
           grabCursor
-          autoplay={{ delay: 3000 }}
+          // autoplay={{ delay: 3000 }}
           navigation
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           pagination={{ type: "bullets", clickable: true }}

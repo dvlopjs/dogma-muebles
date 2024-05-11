@@ -1,10 +1,9 @@
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import SliderReusable from "./SliderReusable";
 import { ImageModel } from "../assets/images/images";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { ChipList } from "./ChipsList";
-import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
-import EngineeringIcon from "@mui/icons-material/Engineering";
+
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 type Props = {
   titleHeader: string;
@@ -19,7 +18,7 @@ export const ReusableContentJob: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <Box display={"flex"} alignItems={"center"} gap={1}>
+      <Box display={"flex"} alignItems={"center"} gap={1} pb={5}>
         <LabelImportantIcon />
         <Typography
           variant="h1"
@@ -33,6 +32,7 @@ export const ReusableContentJob: React.FC<Props> = ({
       </Box>
 
       <SliderReusable images={images} />
+
       <Box pt={2} pb={1} display={"flex"} alignItems={"center"} gap={1}>
         <HandymanIcon />
         <Typography variant="h6">Los materiales que utilizamos:</Typography>

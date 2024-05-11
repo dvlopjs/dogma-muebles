@@ -36,7 +36,7 @@ export default function CocinasPage() {
       </Template>
 
       <Template>
-        <Box pt={15} pb={5}>
+        <Box pt={25} pb={5}>
           <ReusableContentJob
             titleHeader="Mobiliario de cocina color Gaudí"
             chipArray={arrayChipsJob2}
