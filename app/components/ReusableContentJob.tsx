@@ -3,8 +3,10 @@ import SliderReusable from "./SliderReusable";
 import { ImageModel } from "../assets/images/images";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { ChipList } from "./ChipsList";
+import imageRandom from "../assets/images/cocinas/cocina1.jpg";
 
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
+import Image from "next/image";
 type Props = {
   titleHeader: string;
   images: ImageModel[];
@@ -30,17 +32,30 @@ export const ReusableContentJob: React.FC<Props> = ({
           {titleHeader}
         </Typography>
       </Box>
+      <Grid
+        container
+        spacing={6}
+        display={"flex"}
+        alignItems={"center"}
+        alignContent={"center"}
+      >
+        <Grid item xs={12} md={7}>
+          <SliderReusable images={images} />
+        </Grid>
 
-      <SliderReusable images={images} />
+        <Grid item xs={12} md={4}>
+          <Box pt={2} pb={1} display={"flex"} alignItems={"center"} gap={1}>
+            <HandymanIcon />
 
-      <Box pt={2} pb={1} display={"flex"} alignItems={"center"} gap={1}>
-        <HandymanIcon />
-        <Typography variant="h6">Los materiales que utilizamos:</Typography>
-      </Box>
-      <Box pb={2}>
-        <Divider />
-      </Box>
-      <ChipList chips={chipArray} />
+            <Typography variant="h6">Los materiales que utilizamos</Typography>
+          </Box>
+          <Box pb={2}>
+            <Divider />
+          </Box>
+
+          <ChipList chips={chipArray} />
+        </Grid>
+      </Grid>
     </>
   );
 };

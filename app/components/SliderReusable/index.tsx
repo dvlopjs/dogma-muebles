@@ -5,13 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ImageModel } from "../../assets/images/images";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Zoom } from "swiper/modules";
 import { useMediaQuery, useTheme } from "@mui/material";
 
 type PropsSlide = {
@@ -21,33 +15,46 @@ type PropsSlide = {
 export default function SliderReusable({ images }: PropsSlide) {
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <section style={{ paddingTop: 15, paddingBottom: 15 }}>
-      <div className="swiper-container">
-        <Swiper
-          grabCursor
-          navigation
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          pagination={{ type: "bullets", clickable: true }}
-          className="h-full w-full rounded-lg"
-        >
-          {images.map((image, index) => (
-            <SwiperSlide key={index} virtualIndex={index}>
+    <section
+      // className="swiper-container"
+
+      style={{ height: xs ? "500px" : "575px" }}
+    >
+      <Swiper
+        grabCursor
+        navigation
+        enabled
+        zoom={{ maxRatio: 6, minRatio: 2 }}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Zoom]}
+        pagination={{ type: "bullets", clickable: true }}
+        style={{ height: "100%" }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index} virtualIndex={index}>
+            <div style={{ height: "100%", position: "relative" }}>
               <div
-                style={{ height: xs ? "500px" : "700px" }}
-                className="flex w-full  items-center justify-center"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                }}
               >
                 <Image
+                  quality={100}
                   src={image.src}
                   alt={image.alt}
-                  className="block h-full w-full object-cover"
-                  sizes="100vw"
+                  layout="fill"
+                  objectFit="contain"
                 />
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }

@@ -1,17 +1,28 @@
 "use client";
-import { Box, Button, Divider, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
 import { ReactTyped } from "react-typed";
 import { useMediasQuerys } from "../utils/useMediasQuerys";
+import Image from "next/image";
+import DogmaLogo from "../assets/images/dogma-logo.jpg";
+import { LogoMain } from "./LogoMain";
 export const MainContent: React.FC = () => {
   const { downSm } = useMediasQuerys();
 
   return (
     <>
+      <LogoMain />
       <Typography
-        pt={20}
+        pt={5}
         align="center"
         variant="h1"
         fontWeight="bold"
@@ -22,6 +33,13 @@ export const MainContent: React.FC = () => {
         }}
       >
         ¡Transformá tus espacios con nosotros!
+      </Typography>
+
+      <Typography color={"#F0F9E6"} padding={5} textAlign={"center"}>
+        Carpintería en melamina, diseños propios y trabajos a medida, contamos
+        con herramientas de diseño modernas que nos permiten realizar una
+        recreacion fiel del espacio a trabajar y anticiparnos al resultado
+        final.
       </Typography>
 
       <Typography
