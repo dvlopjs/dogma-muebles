@@ -9,6 +9,7 @@ type Props = {
   text: React.ReactElement;
   id?: string | undefined;
   images: ImageModel[];
+  goTo: string;
 };
 
 export const SectionContent: React.FC<Props> = ({
@@ -16,6 +17,7 @@ export const SectionContent: React.FC<Props> = ({
   text,
   id,
   images,
+  goTo,
 }) => {
   return (
     <div id={id}>
@@ -26,7 +28,7 @@ export const SectionContent: React.FC<Props> = ({
               <Grid item xs={12} sm={6}>
                 {text}
                 <Box pt={3}>
-                  <SeeMoreButton />
+                  <SeeMoreButton goTo={goTo} />
                 </Box>
               </Grid>
             </Hidden>
@@ -37,7 +39,7 @@ export const SectionContent: React.FC<Props> = ({
               <Grid item xs={12} sm={6}>
                 {text}
                 <Box pt={3}>
-                  <SeeMoreButton />
+                  <SeeMoreButton goTo={goTo} />
                 </Box>
               </Grid>
             </Hidden>
@@ -47,7 +49,7 @@ export const SectionContent: React.FC<Props> = ({
             <Grid item xs={12} sm={6}>
               {text}
               <Box pt={3}>
-                <SeeMoreButton />
+                <SeeMoreButton goTo={goTo} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>

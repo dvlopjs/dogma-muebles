@@ -17,6 +17,7 @@ export const Catalogs: React.FC = () => {
               textColored="sobre cocinas... "
             />
           }
+          goTo="cocinas"
         />
       </Template>
       <Box mt={20}>
@@ -31,6 +32,7 @@ export const Catalogs: React.FC = () => {
               />
             }
             id={"#habitaciones"}
+            goTo="placards"
           />
         </Template>
       </Box>
@@ -38,6 +40,7 @@ export const Catalogs: React.FC = () => {
       <Box mt={20} pb={10}>
         <Template>
           <SectionContent
+            goTo="otros"
             images={images.otros}
             text={
               <TextWithColor

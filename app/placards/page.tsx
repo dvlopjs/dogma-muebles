@@ -14,6 +14,12 @@ export default function PlacardsPage() {
     "Correderas telescópicas",
     "Perfiles de aluminio",
   ];
+  const arrayChipsJob3 = [
+    "Melamina Olmo finlandés",
+    "Perfil tirador euro classic negro",
+    "Bisagras hafele cierre suave",
+    "Correderas telescópicas hafele",
+  ];
   return (
     <Container sx={{ paddingBottom: 20, paddingTop: 10 }}>
       <Template>
@@ -43,7 +49,7 @@ export default function PlacardsPage() {
         <Box pt={25} pb={5}>
           <ReusableContentJob
             titleHeader="Mobiliario de cocina color Gaudí"
-            chipArray={arrayChipsJob2}
+            chipArray={arrayChipsJob3}
             images={imagesWorks.habitaciones.trabajo3}
           />
         </Box>
