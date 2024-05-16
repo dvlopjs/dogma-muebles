@@ -20,6 +20,7 @@ import { Container, Slide, useScrollTrigger } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { sendToChat } from "../utils/sendToChat";
 import { useRouter } from "next/navigation";
+import { ButtonMenuDropdown } from "./ButtonMenuDropdown";
 
 interface Props {
   /**
@@ -104,25 +105,18 @@ export default function Header(props: Props) {
             </Box>
 
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-              {navItems.map((item) =>
-                item === "Contactanos" ? (
-                  <Box key={item} pl={2}>
-                    <Button
-                      onClick={() => sendToChat()}
-                      startIcon={<WhatsAppIcon />}
-                      variant="outlined"
-                      color="success"
-                      sx={{ color: "#fff", fontWeight: "bold" }}
-                    >
-                      {item}
-                    </Button>
-                  </Box>
-                ) : (
-                  <Button key={item} sx={{ color: "#fff" }}>
-                    {item}
-                  </Button>
-                )
-              )}
+              <Box pr={2}>
+                <ButtonMenuDropdown />
+              </Box>
+              <Button
+                onClick={() => sendToChat()}
+                startIcon={<WhatsAppIcon />}
+                variant="outlined"
+                color="success"
+                sx={{ color: "#fff", fontWeight: "bold" }}
+              >
+                Contactanos
+              </Button>
             </Box>
           </Toolbar>
         </Container>

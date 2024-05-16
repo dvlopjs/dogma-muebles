@@ -12,6 +12,8 @@ import habitacion1 from "./habitaciones/placard1.jpg";
 import habitacion2 from "./habitaciones/placard2.jpg";
 import habitacion3 from "./habitaciones/placard3.jpg";
 import habitacion4 from "./habitaciones/placard4.jpg";
+import habitacion5 from "./habitaciones/placard5.jpg";
+import habitacion6 from "./habitaciones/placard6.jpg";
 
 //Images otros trabajos
 import otros1 from "./escritorios/escritorio1.jpg";
@@ -62,6 +64,18 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
     // Agrega más trabajos según sea necesario
   },
   habitaciones: {
+    trabajo1: [
+      { src: habitacion1, alt: "Trabajo 1 - Habitacion1" },
+      { src: habitacion2, alt: "Trabajo 1 - Habitacion2" },
+    ],
+    trabajo2: [
+      { src: habitacion3, alt: "Trabajo 2 - Habitacion3" },
+      { src: habitacion4, alt: "Trabajo 2 - Habitacion4" },
+    ],
+    trabajo3: [
+      { src: habitacion5, alt: "Trabajo 2 - Habitacion5" },
+      { src: habitacion6, alt: "Trabajo 2 - Habitacion6" },
+    ],
     // Aquí puedes estructurar los trabajos de habitaciones de manera similar si es necesario
   },
   otros: {
