@@ -1,22 +1,24 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+"use client";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import SliderReusable from "./SliderReusable";
 import { ImageModel } from "../assets/images/images";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { ChipList } from "./ChipsList";
-import imageRandom from "../assets/images/cocinas/cocina1.jpg";
 
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
-import Image from "next/image";
+import { InstagramButton } from "./InstagramButton";
 type Props = {
   titleHeader: string;
   images: ImageModel[];
   chipArray: Array<string>;
+  url: string;
 };
 
 export const ReusableContentJob: React.FC<Props> = ({
   titleHeader,
   images,
   chipArray,
+  url,
 }) => {
   return (
     <>
@@ -42,7 +44,6 @@ export const ReusableContentJob: React.FC<Props> = ({
         <Grid item xs={12} md={7}>
           <SliderReusable images={images} />
         </Grid>
-
         <Grid item xs={12} md={4}>
           <Box pt={2} pb={1} display={"flex"} alignItems={"center"} gap={1}>
             <HandymanIcon />
@@ -54,6 +55,9 @@ export const ReusableContentJob: React.FC<Props> = ({
           </Box>
 
           <ChipList chips={chipArray} />
+          <Box pt={5} display={"flex"} pl={1} justifyContent={"start"}>
+            <InstagramButton url={url} />
+          </Box>
         </Grid>
       </Grid>
     </>

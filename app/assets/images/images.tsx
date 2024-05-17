@@ -6,6 +6,10 @@ import cocina4 from "./cocinas/cocina4.jpg";
 import cocina5 from "./cocinas/cocina5.jpg";
 import cocina6 from "./cocinas/cocina6.jpg";
 import cocina7 from "./cocinas/cocina7.jpg";
+import cocina8 from "./cocinas/trabajo3/cocina8.jpg";
+import cocina9 from "./cocinas/trabajo3/cocina9.jpg";
+import cocina10 from "./cocinas/trabajo3/cocina10.jpg";
+import cocina11 from "./cocinas/trabajo3/cocina11.jpg";
 
 //Images habitaciones
 import habitacion1 from "./habitaciones/placard1.jpg";
@@ -57,9 +61,15 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
     ],
     trabajo2: [
       { src: cocina4, alt: "Trabajo 2 - Cocina3" },
-      { src: cocina5, alt: "Trabajo 2 - Cocina4" },
-      { src: cocina6, alt: "Trabajo 2 - Cocina4" },
-      { src: cocina7, alt: "Trabajo 2 - Cocina4" },
+      { src: cocina5, alt: "Trabajo 2 - Cocina5" },
+      { src: cocina6, alt: "Trabajo 2 - Cocina6" },
+      { src: cocina7, alt: "Trabajo 2 - Cocina7" },
+    ],
+    trabajo3: [
+      { src: cocina8, alt: "Trabajo 3 - Cocina8" },
+      { src: cocina9, alt: "Trabajo 3 - Cocina9" },
+      { src: cocina10, alt: "Trabajo 3 - Cocina10" },
+      { src: cocina11, alt: "Trabajo 3 - Cocina11" },
     ],
     // Agrega más trabajos según sea necesario
   },

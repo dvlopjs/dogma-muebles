@@ -31,6 +31,7 @@ export default function PlacardsPage() {
             titleHeader="Vestidor Total White"
             chipArray={arrayChipsJob1}
             images={imagesWorks.habitaciones.trabajo1}
+            url={"https://www.instagram.com/p/Czzts0apt4Y/?img_index=1"}
           />
         </Box>
       </Template>
@@ -41,6 +42,7 @@ export default function PlacardsPage() {
             titleHeader="Amoblamiento integral"
             chipArray={arrayChipsJob2}
             images={imagesWorks.habitaciones.trabajo2}
+            url={"https://www.instagram.com/p/C0uaht8P6kd/?img_index=1"}
           />
         </Box>
       </Template>
@@ -48,9 +50,10 @@ export default function PlacardsPage() {
       <Template>
         <Box pt={25} pb={5}>
           <ReusableContentJob
-            titleHeader="Mobiliario de cocina color Gaudí"
+            titleHeader="Baúleras y torres de guardado mixto"
             chipArray={arrayChipsJob3}
             images={imagesWorks.habitaciones.trabajo3}
+            url="https://www.instagram.com/p/CuvAh9XPB48/?img_index=2"
           />
         </Box>
       </Template>

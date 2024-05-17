@@ -17,11 +17,7 @@ export default function SliderReusable({ images }: PropsSlide) {
   const xs = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <section
-      // className="swiper-container"
-
-      style={{ height: xs ? "500px" : "575px" }}
-    >
+    <section style={{ height: xs ? "500px" : "575px" }}>
       <Swiper
         grabCursor
         navigation
@@ -47,8 +43,10 @@ export default function SliderReusable({ images }: PropsSlide) {
                   quality={100}
                   src={image.src}
                   alt={image.alt}
-                  layout="fill"
-                  objectFit="contain"
+                  sizes="100%"
+                  className="w-full h-auto"
+                  fill
+                  style={{ objectFit: "contain" }}
                 />
               </div>
             </div>

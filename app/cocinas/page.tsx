@@ -20,6 +20,13 @@ export default function CocinasPage() {
     "Bisagras cierre suave",
     "Granito negro Brasil",
   ];
+  const arrayChipsJob3 = [
+    "Melamina blanca ",
+    "Perfilería de aluminio negra",
+    " Granito Franco veteado",
+    "Correderas telescópicas ",
+    "Bisagras sistema cierre suave",
+  ];
   return (
     <Container sx={{ paddingBottom: 20, paddingTop: 10 }}>
       <Template>
@@ -31,6 +38,7 @@ export default function CocinasPage() {
             titleHeader="Mobiliario de cocina con alacenas rebatibles"
             chipArray={arrayChipsJob1}
             images={imagesWorks.cocinas.trabajo1}
+            url="https://www.instagram.com/p/CnIVBX3vQ3E/?img_index=1"
           />
         </Box>
       </Template>
@@ -41,6 +49,18 @@ export default function CocinasPage() {
             titleHeader="Mobiliario de cocina color Gaudí"
             chipArray={arrayChipsJob2}
             images={imagesWorks.cocinas.trabajo2}
+            url="https://www.instagram.com/p/B5Ja7JUHbKB/?img_index=1"
+          />
+        </Box>
+      </Template>
+
+      <Template>
+        <Box pt={25} pb={5}>
+          <ReusableContentJob
+            titleHeader="Mobiliario de cocina - Black & White"
+            chipArray={arrayChipsJob3}
+            images={imagesWorks.cocinas.trabajo3}
+            url="https://www.instagram.com/p/B5Ja7JUHbKB/?img_index=1"
           />
         </Box>
       </Template>
