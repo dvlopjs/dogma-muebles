@@ -60,7 +60,7 @@ export default function CocinasPage() {
             titleHeader="Mobiliario de cocina - Black & White"
             chipArray={arrayChipsJob3}
             images={imagesWorks.cocinas.trabajo3}
-            url="https://www.instagram.com/p/B5Ja7JUHbKB/?img_index=1"
+            url="https://www.instagram.com/p/C3Tm3tysJq5/?img_index=1"
           />
         </Box>
       </Template>
