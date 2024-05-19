@@ -21,9 +21,8 @@ export const ButtonsRedes: React.FC = () => {
           background: "transparent",
           color: hovered.ig ? "#C13584" : "inherit",
         }}
-        onClick={() =>
-          goToAnotherSite("https://www.instagram.com/dogma.muebles/")
-        }
+        target="_blank"
+        href="https://www.instagram.com/dogma.muebles/"
         onMouseLeave={() => setHovered({ ...hovered, ig: false })}
         onMouseEnter={() => setHovered({ ...hovered, ig: true })}
       >
@@ -35,7 +34,8 @@ export const ButtonsRedes: React.FC = () => {
           color: hovered.facebook ? "#1877F2" : "inherit",
           background: "transparent",
         }}
-        onClick={() => goToAnotherSite("https://www.facebook.com/mueblesdogma")}
+        target="_blank"
+        href="https://www.facebook.com/mueblesdogma"
         onMouseLeave={() => setHovered({ ...hovered, facebook: false })}
         onMouseEnter={() => setHovered({ ...hovered, facebook: true })}
       >
@@ -47,6 +47,8 @@ export const ButtonsRedes: React.FC = () => {
           color: hovered.github ? "#FFA500" : "inherit",
           background: "transparent",
         }}
+        target="_blank"
+        href="https://github.com/dvlopjs/dogma-muebles"
         onMouseLeave={() => setHovered({ ...hovered, github: false })}
         onMouseEnter={() => setHovered({ ...hovered, github: true })}
       >

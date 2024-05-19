@@ -26,7 +26,6 @@ export default function RootLayout({
           <body>
             <main
               style={{
-                paddingTop: 10,
                 display: "flex",
                 flexDirection: "column",
                 minHeight: "100vh",

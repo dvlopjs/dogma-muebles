@@ -2,7 +2,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -12,7 +11,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import appLogo from "../assets/images/dogma-logo.jpg";
@@ -80,7 +78,13 @@ export default function Header(props: Props) {
 
   return (
     <HideOnScroll>
-      <AppBar position="sticky" color="transparent" sx={{ boxShadow: "none" }}>
+      <AppBar
+        position="sticky"
+        color="transparent"
+        sx={{
+          boxShadow: "none",
+        }}
+      >
         <Container>
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <IconButton
@@ -93,10 +97,11 @@ export default function Header(props: Props) {
               <MenuIcon />
             </IconButton>
 
-            <Box sx={{ flexGrow: 1 }} pt={1}>
+            <Box sx={{ flexGrow: 1, pt: "0.4rem", pb: "0.4rem" }}>
               <Image
                 onClick={() => router.push("/")}
                 src={appLogo}
+                priority
                 alt="Dogma Muebles"
                 width={80}
                 height={80}

@@ -12,8 +12,7 @@ import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
 import { ReactTyped } from "react-typed";
 import { useMediasQuerys } from "../utils/useMediasQuerys";
-import Image from "next/image";
-import DogmaLogo from "../assets/images/dogma-logo.jpg";
+
 import { LogoMain } from "./LogoMain";
 export const MainContent: React.FC = () => {
   const { downSm } = useMediasQuerys();

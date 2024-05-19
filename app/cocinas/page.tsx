@@ -1,9 +1,11 @@
-import { Box, Container, Divider } from "@mui/material";
+import { Box, Button, Container, Divider } from "@mui/material";
 import React from "react";
 import { imagesWorks } from "../assets/images/images";
 import BasicBreadcrumbs from "../components/BasicBreadcrumbs";
 import { ReusableContentJob } from "../components/ReusableContentJob";
 import Template from "../utils/template";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { HeaderPage } from "../components/HeaderPage";
 
 //   Mobiliario de cocina con alacenas rebatibles
 
@@ -30,9 +32,7 @@ export default function CocinasPage() {
   return (
     <Container sx={{ paddingBottom: 20, paddingTop: 10 }}>
       <Template>
-        <Box pb={10}>
-          <BasicBreadcrumbs text={"Cocinas"} />
-        </Box>
+        <HeaderPage textName="Cocinas" />
         <Box pb={5}>
           <ReusableContentJob
             titleHeader="Mobiliario de cocina con alacenas rebatibles"

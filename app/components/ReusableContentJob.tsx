@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import SliderReusable from "./SliderReusable";
 import { ImageModel } from "../assets/images/images";
 import HandymanIcon from "@mui/icons-material/Handyman";
@@ -7,6 +7,9 @@ import { ChipList } from "./ChipsList";
 
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import { InstagramButton } from "./InstagramButton";
+import { VerPantallaCompletaButton } from "./VerPantallaCompletaButton";
+import ModalFullWindow from "./ModalFullWindow";
+import { useState } from "react";
 type Props = {
   titleHeader: string;
   images: ImageModel[];
@@ -20,6 +23,11 @@ export const ReusableContentJob: React.FC<Props> = ({
   chipArray,
   url,
 }) => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
   return (
     <>
       <Box display={"flex"} alignItems={"center"} gap={1} pb={5}>
@@ -29,6 +37,7 @@ export const ReusableContentJob: React.FC<Props> = ({
           sx={{
             fontSize: "2rem",
             textShados: "4px 4px 9px rgba(0, 0, 0, 0.7)",
+            textDecoration: "underline",
           }}
         >
           {titleHeader}
@@ -55,11 +64,28 @@ export const ReusableContentJob: React.FC<Props> = ({
           </Box>
 
           <ChipList chips={chipArray} />
-          <Box pt={5} display={"flex"} pl={1} justifyContent={"start"}>
+
+          <Box pt={2}>
+            <Divider />
+          </Box>
+
+          <Box pt={3} display={"flex"} pl={1} justifyContent={"start"}>
             <InstagramButton url={url} />
+          </Box>
+
+          <Box pt={3} display={"flex"} pl={1} justifyContent={"start"}>
+            <VerPantallaCompletaButton handleOpenModal={handleOpenModal} />
           </Box>
         </Grid>
       </Grid>
+      {openModal ? (
+        <ModalFullWindow
+          title={titleHeader}
+          images={images}
+          open={openModal}
+          handleClose={() => setOpenModal(false)}
+        />
+      ) : null}
     </>
   );
 };
