@@ -17,8 +17,8 @@ import appLogo from "../assets/images/dogma-logo.jpg";
 import { Container, Slide, useScrollTrigger } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { sendToChat } from "../utils/sendToChat";
-import { useRouter } from "next/navigation";
 import { ButtonMenuDropdown } from "./ButtonMenuDropdown";
+import Link from "next/link";
 
 interface Props {
   /**
@@ -33,7 +33,6 @@ const drawerWidth = 240;
 const navItems = ["Nuestros muebles", "Contactanos"];
 
 export default function Header(props: Props) {
-  const router = useRouter();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -98,15 +97,16 @@ export default function Header(props: Props) {
             </IconButton>
 
             <Box sx={{ flexGrow: 1, pt: "0.4rem", pb: "0.4rem" }}>
-              <Image
-                onClick={() => router.push("/")}
-                src={appLogo}
-                priority
-                alt="Dogma Muebles"
-                width={80}
-                height={80}
-                style={{ borderRadius: "50%", cursor: "pointer" }}
-              />
+              <Link href={"/"}>
+                <Image
+                  src={appLogo}
+                  priority
+                  alt="Dogma Muebles"
+                  width={80}
+                  height={80}
+                  style={{ borderRadius: "50%", cursor: "pointer" }}
+                />
+              </Link>
             </Box>
 
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>

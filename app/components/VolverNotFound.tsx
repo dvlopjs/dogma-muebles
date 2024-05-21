@@ -1,17 +1,14 @@
 "use client";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Button } from "@mui/material";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const VolverNotFound = () => {
-  const router = useRouter();
   return (
-    <Button
-      onClick={() => router.push("/")}
-      variant="outlined"
-      startIcon={<ArrowBackIcon />}
-    >
-      VOLVER
-    </Button>
+    <Link href={"/"}>
+      <Button variant="outlined" startIcon={<ArrowBackIcon />}>
+        VOLVER
+      </Button>
+    </Link>
   );
 };

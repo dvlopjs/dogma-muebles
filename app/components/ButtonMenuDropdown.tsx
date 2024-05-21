@@ -7,7 +7,7 @@ import {
   Paper,
   Popper,
 } from "@mui/material";
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import CountertopsIcon from "@mui/icons-material/Countertops";
@@ -18,8 +18,14 @@ import Link from "next/link";
 export const ButtonMenuDropdown = () => {
   const [open, setOpen] = useState(false);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
+  const [currentPath, setCurrentPath] = useState<string | null>(null);
   const anchorRef = useRef<HTMLButtonElement>(null);
-  // console.log(window.location);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
 
   const handleToggle = useCallback(() => {
     setOpen((prevOpen) => !prevOpen);
@@ -69,7 +75,7 @@ export const ButtonMenuDropdown = () => {
   }, []);
 
   const prevOpen = useRef(open);
-  React.useEffect(() => {
+  useEffect(() => {
     if (prevOpen.current === true && open === false) {
       anchorRef.current!.focus();
     }
@@ -129,14 +135,14 @@ export const ButtonMenuDropdown = () => {
                           gap: 10,
                           color:
                             hoveredButton === item.href ||
-                            window.location.pathname === `${item.href}`
+                            currentPath === item.href
                               ? "rgb(82, 183, 136)"
                               : "",
                           backgroundColor: "transparent",
                           transition: "transform 0.3s, color 0.3s",
                           transform:
                             hoveredButton === item.href ||
-                            window.location.pathname === `${item.href}`
+                            currentPath === item.href
                               ? "scale(1.02)"
                               : "scale(1)",
                         }}
