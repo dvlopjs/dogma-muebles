@@ -13,19 +13,19 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import CountertopsIcon from "@mui/icons-material/Countertops";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AddIcon from "@mui/icons-material/Add";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const ButtonMenuDropdown = () => {
   const [open, setOpen] = useState(false);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
-  const router = useRouter();
   const anchorRef = useRef<HTMLButtonElement>(null);
+  // console.log(window.location);
 
   const handleToggle = useCallback(() => {
     setOpen((prevOpen) => !prevOpen);
   }, []);
 
-  const handleClose = useCallback((event: Event | React.SyntheticEvent) => {
+  const handleClose = useCallback((event: MouseEvent | TouchEvent) => {
     if (
       anchorRef.current &&
       anchorRef.current.contains(event.target as HTMLElement)
@@ -51,18 +51,22 @@ export const ButtonMenuDropdown = () => {
   }, []);
 
   const menuItems = [
-    { label: "Mobiliario de Cocina", icon: <CountertopsIcon />, id: "cocinas" },
-    { label: "Placards y vestidores", icon: <CheckroomIcon />, id: "placards" },
-    { label: "Más trabajos", icon: <AddIcon />, id: "otros" },
+    {
+      label: "Mobiliario de Cocina",
+      icon: <CountertopsIcon />,
+      href: "/cocinas",
+    },
+    {
+      label: "Placards y vestidores",
+      icon: <CheckroomIcon />,
+      href: "/placards",
+    },
+    { label: "Más trabajos", icon: <AddIcon />, href: "/otros" },
   ];
 
-  const handleOnClickItem = useCallback(
-    (id: string) => {
-      router.push(`/${id}`);
-      handleToggle();
-    },
-    [router, handleToggle]
-  );
+  const handleMenuItemClick = useCallback(() => {
+    setOpen(false);
+  }, []);
 
   const prevOpen = useRef(open);
   React.useEffect(() => {
@@ -81,10 +85,7 @@ export const ButtonMenuDropdown = () => {
         aria-expanded={open ? "true" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        style={{
-          color: "#fff",
-          backgroundColor: "transparent",
-        }}
+        style={{ color: "#fff", backgroundColor: "transparent" }}
         endIcon={open ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
       >
         NUESTROS MUEBLES
@@ -117,45 +118,41 @@ export const ButtonMenuDropdown = () => {
                   onKeyDown={handleListKeyDown}
                 >
                   {menuItems.map((item) => (
-                    <MenuItem
-                      key={item.id}
-                      onMouseEnter={() => handleMouseEnter(item.id)}
-                      onMouseLeave={handleMouseLeave}
-                      onClick={() => handleOnClickItem(item.id)}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        color:
-                          hoveredButton === item.id ? "rgb(82, 183, 136)" : "",
-                        backgroundColor: "transparent",
-                        transition: "transform 0.3s, color 0.3s",
-                        transform:
-                          hoveredButton === item.id
-                            ? "scale(1.02)"
-                            : "scale(1)",
-                      }}
-                    >
-                      <div
+                    <Link key={item.href} href={item.href} passHref>
+                      <MenuItem
+                        onMouseEnter={() => handleMouseEnter(item.href)}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={handleMenuItemClick}
                         style={{
                           display: "flex",
                           alignItems: "center",
                           gap: 10,
-                          transition: "transform 0.3s, color 0.3s",
                           color:
-                            hoveredButton === item.id
+                            hoveredButton === item.href ||
+                            window.location.pathname === `${item.href}`
                               ? "rgb(82, 183, 136)"
                               : "",
+                          backgroundColor: "transparent",
+                          transition: "transform 0.3s, color 0.3s",
                           transform:
-                            hoveredButton === item.id
-                              ? "scale(1.2)"
+                            hoveredButton === item.href ||
+                            window.location.pathname === `${item.href}`
+                              ? "scale(1.02)"
                               : "scale(1)",
                         }}
                       >
-                        {item.icon}
-                      </div>
-                      {item.label}
-                    </MenuItem>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 10,
+                          }}
+                        >
+                          {item.icon}
+                        </div>
+                        {item.label}
+                      </MenuItem>
+                    </Link>
                   ))}
                 </MenuList>
               </ClickAwayListener>
