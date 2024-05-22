@@ -36,7 +36,7 @@ const TestimonialSlider: FC<TestimonialSliderProps> = ({ testimonials }) => {
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 6000 }}
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
