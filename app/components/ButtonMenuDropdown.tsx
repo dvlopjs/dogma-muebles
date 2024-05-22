@@ -15,7 +15,7 @@ import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AddIcon from "@mui/icons-material/Add";
 import Link from "next/link";
 
-export const ButtonMenuDropdown = () => {
+export const ButtonMenuDropdown: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
   const [currentPath, setCurrentPath] = useState<string | null>(null);
