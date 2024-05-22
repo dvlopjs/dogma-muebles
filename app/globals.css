@@ -67,3 +67,79 @@ body {
 
   /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
 }
+
+.sliderContainer {
+  /* background: linear-gradient(to right, #000000, #0a0a0a); */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Elevation effect */
+  padding-top: 40px;
+  /* box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); */
+}
+
+.testimonialSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 200px; /* Fija la altura del slide */
+  background: #0a0a0a;
+  border-radius: 10px;
+  flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+}
+.testimonialName {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #52b788;
+}
+
+.testimonialText {
+  font-size: 1em;
+  color: #ffffff;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.customTitle {
+  color: #ffffff; /* Blanco */
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.customTitleContainer {
+  padding: 20px 0;
+  border-bottom: 2px solid #52b788;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .sliderContainer {
+    padding: 20px;
+  }
+
+  .testimonialSlide {
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    height: 300px;
+  }
+
+  .testimonialName {
+    font-size: 1.1em;
+  }
+
+  .testimonialText {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+}
