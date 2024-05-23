@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-
+import Script from "next/script";
 import ThemeRegistry from "./theme/ThemeRegistry";
 import { Footer } from "./components/Footer/Footer";
 import Head from "next/head";
@@ -32,13 +32,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <Head>
-        {/* Agrega la meta etiqueta de verificación de Google Search Console */}
+      {/* <Head>
         <meta
           name="google-site-verification"
           content="google-site-verification=XvOJpp89aZQSzdYMXQ4N_G2dVn2goCRdB3SG5mM6yk4"
         />
-      </Head>
+      </Head> */}
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-L96XXJJFZQ"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L96XXJJFZQ')`}
+        </Script>
+      </head>
       <AppRouterCacheProvider options={{ enableCssLayer: true }}>
         <ThemeRegistry>
           <body>
