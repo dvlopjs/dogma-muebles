@@ -20,8 +20,16 @@ import habitacion5 from "./habitaciones/placard5.jpg";
 import habitacion6 from "./habitaciones/placard6.jpg";
 
 //Images otros trabajos
-import otros1 from "./escritorios/escritorio1.jpg";
-import otros2 from "./escritorios/escritorio2.jpg";
+import otros1 from "./otros/otros1.jpg";
+import otros2 from "./otros/otros2.jpg";
+import otros3 from "./otros/otros3.jpg";
+import otros4 from "./otros/otros4.jpg";
+import otros5 from "./otros/otros5.jpg";
+import otros6 from "./otros/otros6.jpg";
+import otros7 from "./otros/otros7.jpg";
+import otros8 from "./otros/otros8.jpg";
+import otros9 from "./otros/otros9.jpg";
+
 import { StaticImageData } from "next/image";
 
 export type ImageModel = {
@@ -71,7 +79,6 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
       { src: cocina10, alt: "Trabajo 3 - Cocina10" },
       { src: cocina11, alt: "Trabajo 3 - Cocina11" },
     ],
-    // Agrega más trabajos según sea necesario
   },
   habitaciones: {
     trabajo1: [
@@ -86,9 +93,20 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
       { src: habitacion5, alt: "Trabajo 2 - Habitacion5" },
       { src: habitacion6, alt: "Trabajo 2 - Habitacion6" },
     ],
-    // Aquí puedes estructurar los trabajos de habitaciones de manera similar si es necesario
   },
   otros: {
-    // Aquí puedes estructurar los trabajos de otros de manera similar si es necesario
+    trabajo1: [
+      { src: otros1, alt: "Trabajo 1 - Otros1" },
+      { src: otros2, alt: "Trabajo 2 - Otros2" },
+      { src: otros3, alt: "Trabajo 3 - Otros3" },
+    ],
+    trabajo2: [
+      { src: otros4, alt: "Trabajo 4 - Habitacion4" },
+      { src: otros5, alt: "Trabajo 5 - Habitacion5" },
+    ],
+    trabajo3: [
+      { src: habitacion5, alt: "Trabajo 2 - Habitacion5" },
+      { src: habitacion6, alt: "Trabajo 2 - Habitacion6" },
+    ],
   },
 };

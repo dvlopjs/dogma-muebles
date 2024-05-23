@@ -9,9 +9,19 @@ import { Footer } from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// export const metadata: Metadata = {
+//   title: "Dogma Muebles",
+//   description: "Muebles de calidad a medida.",
+// };
 export const metadata: Metadata = {
   title: "Dogma Muebles",
   description: "Muebles de calidad a medida.",
+  openGraph: {
+    title: "Dogma Muebles",
+    description: "Muebles de calidad a medida.",
+    url: "https://dogmamuebles.vercel.app",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -33,7 +33,7 @@ export default function CocinasPage() {
         <HeaderPage textName="Otros trabajos" />
         <Box pb={5}>
           <ReusableContentJob
-            titleHeader="Mobiliario de cocina con alacenas rebatibles"
+            titleHeader="Puerta divisora de ambientes - Kit corredizo estilo granero"
             chipArray={arrayChipsJob1}
             images={imagesWorks.cocinas.trabajo1}
             url="https://www.instagram.com/p/CnIVBX3vQ3E/?img_index=1"

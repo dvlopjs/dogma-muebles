@@ -5,9 +5,7 @@ import { Catalogs } from "./components/Catalogs";
 import Animate from "./utils/animate";
 import TestimonialSlider from "./components/SlideUsuarios";
 import { testimonials } from "./components/SlideUsuarios/testimonios";
-import Template from "./utils/template";
 import LeftToRightAnimate from "./utils/LeftToRightAnimate";
-import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 
 export default function Home() {
   return (
@@ -30,7 +28,7 @@ export default function Home() {
 
       <LeftToRightAnimate>
         <Box pb={20} pt={20}>
-          <Box className="customTitleContainer" textAlign="center">
+          <Box className="customTitleContainer">
             <Typography variant="h4" className="customTitle">
               Clientes felices, nosotros satisfechos...
             </Typography>
