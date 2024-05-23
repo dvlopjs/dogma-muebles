@@ -6,6 +6,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 
 import ThemeRegistry from "./theme/ThemeRegistry";
 import { Footer } from "./components/Footer/Footer";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <Head>
+        {/* Agrega la meta etiqueta de verificación de Google Search Console */}
+        <meta
+          name="google-site-verification"
+          content="google-site-verification=XvOJpp89aZQSzdYMXQ4N_G2dVn2goCRdB3SG5mM6yk4"
+        />
+      </Head>
       <AppRouterCacheProvider options={{ enableCssLayer: true }}>
         <ThemeRegistry>
           <body>
