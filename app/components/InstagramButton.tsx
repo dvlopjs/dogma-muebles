@@ -5,13 +5,11 @@ type Props = {
   url: string;
 };
 export const InstagramButton: React.FC<Props> = ({ url }) => {
-  const goToInstagramPhoto = () => {
-    window.open(url);
-  };
   return (
     <Button
       variant="outlined"
-      onClick={goToInstagramPhoto}
+      href={url}
+      target="_blank"
       endIcon={<InstagramIcon />}
       size="small"
       style={{
@@ -20,7 +18,6 @@ export const InstagramButton: React.FC<Props> = ({ url }) => {
         borderImageSource:
           "linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FFDC80)",
         color: "#fff",
-        fontWeight: "bold",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = "rgba(225, 48, 108, 0.1)"; // Fondo más claro al hacer hover

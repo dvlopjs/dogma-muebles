@@ -29,6 +29,9 @@ import otros6 from "./otros/otros6.jpg";
 import otros7 from "./otros/otros7.jpg";
 import otros8 from "./otros/otros8.jpg";
 import otros9 from "./otros/otros9.jpg";
+import otros10 from "./otros/otros10.jpg";
+import otros11 from "./otros/otros11.jpg";
+import otros12 from "./otros/otros12.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -54,10 +57,10 @@ export const images: { [key: string]: ImageModel[] } = {
     { src: habitacion4, alt: "habitacion4" },
   ],
   otros: [
-    { src: otros1, alt: "Otros1" },
-    { src: otros2, alt: "Otros2" },
-    { src: otros3, alt: "Otros3" },
-    { src: otros4, alt: "Otros4" },
+    { src: otros7, alt: "Otros1" },
+    { src: otros8, alt: "Otros2" },
+    { src: otros4, alt: "Otros3" },
+    { src: otros5, alt: "Otros4" },
   ],
 };
 
@@ -103,14 +106,19 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
       { src: otros3, alt: "Trabajo 1 - Otros3" },
     ],
     trabajo2: [
-      { src: otros4, alt: "Trabajo 2 - Habitacion4" },
-      { src: otros5, alt: "Trabajo 2 - Habitacion5" },
+      { src: otros4, alt: "Trabajo 2 - Otros4" },
+      { src: otros5, alt: "Trabajo 2 - Otros5" },
     ],
     trabajo3: [
-      { src: otros6, alt: "Trabajo 3 - Otros5" },
-      { src: otros7, alt: "Trabajo 3 - Otros5" },
-      { src: otros8, alt: "Trabajo 3 - Otros5" },
-      { src: otros9, alt: "Trabajo 3 - Otros5" },
+      { src: otros6, alt: "Trabajo 3 - Otros6" },
+      { src: otros7, alt: "Trabajo 3 - Otros7" },
+      { src: otros8, alt: "Trabajo 3 - Otros8" },
+      { src: otros9, alt: "Trabajo 3 - Otros9" },
+    ],
+    trabajo4: [
+      { src: otros10, alt: "Trabajo 3 - Otros10" },
+      { src: otros11, alt: "Trabajo 3 - Otros11" },
+      { src: otros12, alt: "Trabajo 3 - Otros12" },
     ],
   },
 };

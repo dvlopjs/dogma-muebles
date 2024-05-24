@@ -7,7 +7,7 @@ import { HeaderPage } from "../components/HeaderPage";
 
 //   Mobiliario de cocina con alacenas rebatibles
 
-export default function CocinasPage() {
+export default function OtrosPage() {
   const arrayChipsJob1 = [
     "Melamina color venezia",
     "Herrajes de primera calidad",
@@ -21,11 +21,15 @@ export default function CocinasPage() {
     "Granito negro Brasil",
   ];
   const arrayChipsJob3 = [
-    "Melamina blanca ",
-    "Perfilería de aluminio negra",
-    " Granito Franco veteado",
-    "Correderas telescópicas ",
-    "Bisagras sistema cierre suave",
+    "Exhibidor con estantes regulables",
+    "Mostrador",
+    "Estantes flotantes",
+    "Cubos multipropósito",
+  ];
+  const arrayChipsJob4 = [
+    "Melamina blanca 18mm sobre MDF",
+    "Correderas telescópicas",
+    "Fondos macizos",
   ];
   return (
     <Container sx={{ paddingBottom: 20, paddingTop: 10 }}>
@@ -33,32 +37,43 @@ export default function CocinasPage() {
         <HeaderPage textName="Otros trabajos" />
         <Box pb={5}>
           <ReusableContentJob
+            titleHeader="Remodelación zapatería de la zona"
+            chipArray={arrayChipsJob3}
+            images={imagesWorks.otros.trabajo3}
+            url="https://www.instagram.com/p/C3Tm3tysJq5/?img_index=1"
+          />
+        </Box>
+      </Template>
+
+      <Template>
+        <Box pt={25} pb={5}>
+          <ReusableContentJob
+            titleHeader="Vestidor aéreo + Mueble de guardado mixto"
+            chipArray={arrayChipsJob2}
+            images={imagesWorks.otros.trabajo2}
+            url="https://www.instagram.com/p/Cc3sMfhvzrX/?img_index=1"
+          />
+        </Box>
+      </Template>
+
+      <Template>
+        <Box pt={25} pb={5}>
+          <ReusableContentJob
+            titleHeader="Despensero realizado a medida"
+            chipArray={arrayChipsJob4}
+            images={imagesWorks.otros.trabajo4}
+            url="https://www.instagram.com/p/CDU-WGHHdad/?img_index=1"
+          />
+        </Box>
+      </Template>
+
+      <Template>
+        <Box pt={25} pb={5}>
+          <ReusableContentJob
             titleHeader="Puerta divisora de ambientes - Kit corredizo estilo granero"
             chipArray={arrayChipsJob1}
-            images={imagesWorks.cocinas.trabajo1}
-            url="https://www.instagram.com/p/CnIVBX3vQ3E/?img_index=1"
-          />
-        </Box>
-      </Template>
-
-      <Template>
-        <Box pt={25} pb={5}>
-          <ReusableContentJob
-            titleHeader="Mobiliario de cocina color Gaudí"
-            chipArray={arrayChipsJob2}
-            images={imagesWorks.cocinas.trabajo2}
-            url="https://www.instagram.com/p/B5Ja7JUHbKB/?img_index=1"
-          />
-        </Box>
-      </Template>
-
-      <Template>
-        <Box pt={25} pb={5}>
-          <ReusableContentJob
-            titleHeader="Mobiliario de cocina - Black & White"
-            chipArray={arrayChipsJob3}
-            images={imagesWorks.cocinas.trabajo3}
-            url="https://www.instagram.com/p/C3Tm3tysJq5/?img_index=1"
+            images={imagesWorks.otros.trabajo1}
+            url="https://www.instagram.com/p/Co8MWC1PWUD/?img_index=1"
           />
         </Box>
       </Template>
