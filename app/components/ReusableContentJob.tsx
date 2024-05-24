@@ -35,9 +35,13 @@ export const ReusableContentJob: React.FC<Props> = ({
         <Typography
           variant="h1"
           sx={{
-            fontSize: "2rem",
+            fontSize: {
+              xs: "1.5rem",
+              sm: "2rem",
+            },
+            // fontSize: "2rem",
             textShados: "4px 4px 9px rgba(0, 0, 0, 0.7)",
-            textDecoration: "underline",
+            // textDecoration: "underline",
           }}
         >
           {titleHeader}
