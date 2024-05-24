@@ -56,6 +56,8 @@ export const images: { [key: string]: ImageModel[] } = {
   otros: [
     { src: otros1, alt: "Otros1" },
     { src: otros2, alt: "Otros2" },
+    { src: otros3, alt: "Otros3" },
+    { src: otros4, alt: "Otros4" },
   ],
 };
 
@@ -97,16 +99,18 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
   otros: {
     trabajo1: [
       { src: otros1, alt: "Trabajo 1 - Otros1" },
-      { src: otros2, alt: "Trabajo 2 - Otros2" },
-      { src: otros3, alt: "Trabajo 3 - Otros3" },
+      { src: otros2, alt: "Trabajo 1 - Otros2" },
+      { src: otros3, alt: "Trabajo 1 - Otros3" },
     ],
     trabajo2: [
-      { src: otros4, alt: "Trabajo 4 - Habitacion4" },
-      { src: otros5, alt: "Trabajo 5 - Habitacion5" },
+      { src: otros4, alt: "Trabajo 2 - Habitacion4" },
+      { src: otros5, alt: "Trabajo 2 - Habitacion5" },
     ],
     trabajo3: [
-      { src: habitacion5, alt: "Trabajo 2 - Habitacion5" },
-      { src: habitacion6, alt: "Trabajo 2 - Habitacion6" },
+      { src: otros6, alt: "Trabajo 3 - Otros5" },
+      { src: otros7, alt: "Trabajo 3 - Otros5" },
+      { src: otros8, alt: "Trabajo 3 - Otros5" },
+      { src: otros9, alt: "Trabajo 3 - Otros5" },
     ],
   },
 };

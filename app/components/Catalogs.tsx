@@ -44,8 +44,8 @@ export const Catalogs: React.FC = () => {
             images={images.otros}
             text={
               <TextWithColor
-                textWithoutColor="Un poco más de nuestros trabajos y sobre todo"
-                textColored="clientes satisfechos..."
+                textWithoutColor="Un poco más de nuestros trabajos y"
+                textColored="proyectos realizados..."
               />
             }
           />
