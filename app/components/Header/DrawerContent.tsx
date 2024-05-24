@@ -21,7 +21,6 @@ interface Props {
 }
 
 export const DrawerContent: React.FC<Props> = ({ handleDrawerToggle }) => {
-  const navItems = ["Nuestros muebles", "Contactanos"];
   const menuItems = [
     {
       label: "Mobiliario de Cocina",
@@ -62,7 +61,7 @@ export const DrawerContent: React.FC<Props> = ({ handleDrawerToggle }) => {
           startIcon={<WhatsAppIcon />}
           variant="outlined"
           color="success"
-          sx={{ color: "#fff", fontWeight: "bold" }}
+          sx={{ color: "#fff" }}
         >
           Contactanos
         </Button>

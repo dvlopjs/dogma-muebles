@@ -28,7 +28,6 @@ import otros5 from "./otros/otros5.jpg";
 import otros6 from "./otros/otros6.jpg";
 import otros7 from "./otros/otros7.jpg";
 import otros8 from "./otros/otros8.jpg";
-import otros9 from "./otros/otros9.jpg";
 import otros10 from "./otros/otros10.jpg";
 import otros11 from "./otros/otros11.jpg";
 import otros12 from "./otros/otros12.jpg";
@@ -113,7 +112,6 @@ export const imagesWorks: { [key: string]: { [key: string]: ImageModel[] } } = {
       { src: otros6, alt: "Trabajo 3 - Otros6" },
       { src: otros7, alt: "Trabajo 3 - Otros7" },
       { src: otros8, alt: "Trabajo 3 - Otros8" },
-      { src: otros9, alt: "Trabajo 3 - Otros9" },
     ],
     trabajo4: [
       { src: otros10, alt: "Trabajo 3 - Otros10" },

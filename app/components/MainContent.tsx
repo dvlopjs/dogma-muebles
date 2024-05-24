@@ -12,16 +12,17 @@ import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
 import { ReactTyped } from "react-typed";
 import { useMediasQuerys } from "../utils/useMediasQuerys";
-
+import DogmaMain from "../assets/images/DogmaMain.jpg";
 import { LogoMain } from "./LogoMain";
+import Image from "next/image";
 export const MainContent: React.FC = () => {
   const { downSm } = useMediasQuerys();
 
   return (
     <>
-      <LogoMain />
       <Typography
-        pt={5}
+        pt={10}
+        pb={10}
         align="center"
         variant="h1"
         fontWeight="bold"
@@ -34,19 +35,43 @@ export const MainContent: React.FC = () => {
         ¡Transformá tus espacios con nosotros!
       </Typography>
 
-      <Typography color={"#F0F9E6"} padding={5} textAlign={"center"}>
-        Carpintería en melamina, diseños propios y trabajos a medida, contamos
-        con herramientas de diseño modernas que nos permiten realizar una
-        recreacion fiel del espacio a trabajar y anticiparnos al resultado
-        final.
-      </Typography>
+      <Grid container alignItems={"center"}>
+        <Grid item xs={12} md={6}>
+          <Box pt={5} pb={5} display={"flex"} justifyContent={"center"}>
+            <Image
+              style={{ borderRadius: "5%" }}
+              width={350}
+              height={350}
+              src={DogmaMain}
+              alt="Dogma Muebles"
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <LogoMain />
+          <Box pt={2} display={"flex"} justifyContent={"center"}>
+            <Divider sx={{ width: "50%" }} />
+          </Box>
+          <Typography
+            variant="h6"
+            color={"#F0F9E6"}
+            padding={5}
+            textAlign={"center"}
+          >
+            Carpintería en melamina, diseños propios y trabajos a medida,
+            contamos con herramientas de diseño modernas que nos permiten
+            realizar una recreacion fiel del espacio a trabajar y anticiparnos
+            al resultado final.
+          </Typography>
+        </Grid>
+      </Grid>
 
       <Typography
         align="center"
         variant="h5"
         fontWeight="bold"
+        pt={10}
         style={{
-          paddingTop: 10,
           fontSize: downSm ? "1rem" : "1.5rem",
 
           color: "#52b788",

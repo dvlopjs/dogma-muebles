@@ -38,15 +38,16 @@ export const ToolBarHeader: React.FC<Props> = ({ handleDrawerToggle }) => {
         </Box>
 
         <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-          <Box pr={2}>
+          <Box pr={1}>
             <ButtonMenuDropdown />
           </Box>
+
           <Link target="_blank" href={`https://wa.me/+5493546477298`}>
             <Button
               startIcon={<WhatsAppIcon />}
               variant="outlined"
               color="success"
-              sx={{ color: "#fff", fontWeight: "bold" }}
+              sx={{ color: "#fff" }}
             >
               Contactanos
             </Button>
