@@ -1,5 +1,5 @@
 import { Box, Container, Divider, Typography } from "@mui/material";
-import { MainContent } from "./components/MainContent";
+import { MainContent } from "./components/MainContent/MainContent";
 
 import { Catalogs } from "./components/Catalogs";
 import Animate from "./utils/animate";

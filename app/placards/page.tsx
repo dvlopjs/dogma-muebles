@@ -1,7 +1,6 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
 import { imagesWorks } from "../assets/images/images";
-import BasicBreadcrumbs from "../components/BasicBreadcrumbs";
 import { ReusableContentJob } from "../components/ReusableContentJob";
 import Template from "../utils/template";
 import { HeaderPage } from "../components/HeaderPage";
