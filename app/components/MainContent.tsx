@@ -22,26 +22,32 @@ export const MainContent: React.FC = () => {
     <>
       <Typography
         pt={10}
-        pb={10}
+        pb={5}
         align="center"
         variant="h1"
         fontWeight="bold"
-        style={{
-          fontSize: downSm ? "2.5rem" : "3rem",
+        sx={{
+          fontSize: {
+            sm: "3rem",
+            xs: "2.5rem",
+          },
           color: "white",
           textShadow: "4px 4px 9px rgba(0, 0, 0, 0.7)",
         }}
       >
         ¡Transformá tus espacios con nosotros!
       </Typography>
+      <Box display={"flex"} justifyContent={"center"}>
+        <Divider sx={{ width: "80%" }} />
+      </Box>
 
       <Grid container alignItems={"center"}>
         <Grid item xs={12} md={6}>
           <Box pt={5} pb={5} display={"flex"} justifyContent={"center"}>
             <Image
               style={{ borderRadius: "5%" }}
-              width={350}
-              height={350}
+              width={450}
+              height={450}
               src={DogmaMain}
               alt="Dogma Muebles"
             />
