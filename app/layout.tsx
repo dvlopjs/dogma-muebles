@@ -33,13 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      {/* <Head>
+      <head>
         <meta
           name="google-site-verification"
-          content="google-site-verification=XvOJpp89aZQSzdYMXQ4N_G2dVn2goCRdB3SG5mM6yk4"
+          content="XvOJpp89aZQSzdYMXQ4N_G2dVn2goCRdB3SG5mM6yk4"
         />
-      </Head> */}
-      <head>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-L96XXJJFZQ"
