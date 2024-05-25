@@ -39,9 +39,8 @@ export const ReusableContentJob: React.FC<Props> = ({
               xs: "1.5rem",
               sm: "2rem",
             },
-            // fontSize: "2rem",
+            fontFamily: "fantasy",
             textShados: "4px 4px 9px rgba(0, 0, 0, 0.7)",
-            // textDecoration: "underline",
           }}
         >
           {titleHeader}

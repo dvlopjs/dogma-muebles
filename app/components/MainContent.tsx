@@ -1,12 +1,5 @@
 "use client";
-import {
-  Box,
-  Button,
-  Divider,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
 import { scrollSmooth } from "../utils/scrollSmooth";
@@ -105,6 +98,7 @@ export const MainContent: React.FC = () => {
               transform: "translateY(-5px)",
             },
           }}
+          size="large"
           onClick={() => scrollSmooth("#cocinas")}
         >
           <Box

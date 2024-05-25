@@ -7,6 +7,7 @@ import Script from "next/script";
 import ThemeRegistry from "./theme/ThemeRegistry";
 import { Footer } from "./components/Footer/Footer";
 import Head from "next/head";
+import ScrollToTop from "./utils/ScrollToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +69,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <ScrollToTop />
           </body>
         </ThemeRegistry>
       </AppRouterCacheProvider>

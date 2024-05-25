@@ -6,6 +6,7 @@ import Animate from "./utils/animate";
 import TestimonialSlider from "./components/SlideUsuarios";
 import { testimonials } from "./components/SlideUsuarios/testimonios";
 import LeftToRightAnimate from "./utils/LeftToRightAnimate";
+import ScrollToTop from "./utils/ScrollToTopButton";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
           </Box>
         </Box>
       </LeftToRightAnimate>
+      {/* <ScrollToTop /> */}
     </Container>
   );
 }
