@@ -19,7 +19,12 @@ export const MainContent: React.FC = () => {
         <Grid item xs={12} md={6}>
           <Box pt={5} pb={5} display={"flex"} justifyContent={"center"}>
             <Image
-              style={{ borderRadius: "5%" }}
+              style={{
+                borderRadius: "5%",
+                border: "2px solid #555555", // Borde gris oscuro
+                boxShadow:
+                  "0 0 10px #555555, 0 0 20px #555555, 0 0 30px #555555", // Sombra suave gris oscuro
+              }}
               width={450}
               height={450}
               src={DogmaMain}
