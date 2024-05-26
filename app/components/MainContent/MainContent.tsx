@@ -21,9 +21,8 @@ export const MainContent: React.FC = () => {
             <Image
               style={{
                 borderRadius: "5%",
-                border: "2px solid #555555", // Borde gris oscuro
                 boxShadow:
-                  "0 0 10px #555555, 0 0 20px #555555, 0 0 30px #555555", // Sombra suave gris oscuro
+                  "0 0 5px #444444, 0 0 10px #444444, 0 0 15px #444444", // Sombra menos intensa gris oscuro
               }}
               width={450}
               height={450}
