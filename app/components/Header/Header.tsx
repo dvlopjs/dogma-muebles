@@ -15,7 +15,7 @@ interface Props {
   children: React.ReactElement | any;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 export default function Header(props: Props) {
   const { window } = props;

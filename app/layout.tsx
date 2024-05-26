@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Script from "next/script";
 import ThemeRegistry from "./theme/ThemeRegistry";
 import { Footer } from "./components/Footer/Footer";
-import Head from "next/head";
 import ScrollToTop from "./utils/ScrollToTopButton";
 
-const inter = Inter({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "Dogma Muebles",
-//   description: "Muebles de calidad a medida.",
-// };
 export const metadata: Metadata = {
   title: "Dogma Muebles",
   description: "Muebles de calidad a medida.",

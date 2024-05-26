@@ -12,6 +12,7 @@ export const LinksRedes: React.FC = () => {
         color={"beige"}
         align="center"
         fontFamily={"fantasy"}
+        variant="h6"
         sx={{
           display: "flex",
           alignItems: "center",
@@ -21,14 +22,14 @@ export const LinksRedes: React.FC = () => {
       >
         SEGUINOS TAMBIEN EN{" "}
         <Link href={"https://www.instagram.com/dogma.muebles/"} target="_blank">
-          <IconButton size="small" style={{ color: instagramColor }}>
-            <Instagram />
+          <IconButton size="small">
+            <Instagram fontSize="large" />
           </IconButton>{" "}
         </Link>
         |{" "}
         <Link target="_blank" href="https://www.facebook.com/mueblesdogma">
-          <IconButton size="small" style={{ color: facebookColor }}>
-            <Facebook />
+          <IconButton size="small">
+            <Facebook fontSize="large" />
           </IconButton>
         </Link>
       </Typography>
