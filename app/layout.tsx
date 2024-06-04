@@ -42,6 +42,8 @@ export default function RootLayout({
 
   gtag('config', 'G-L96XXJJFZQ')`}
         </Script>
+        <link rel="canonical" href="https://dogmamuebles.vercel.app/" />
+
       </head>
       <AppRouterCacheProvider options={{ enableCssLayer: true }}>
         <ThemeRegistry>
