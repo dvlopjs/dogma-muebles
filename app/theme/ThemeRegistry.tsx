@@ -30,6 +30,9 @@ const themeOptions: ThemeOptions = {
     //   main: "#41B06E",
     // },
   },
+  shape: {
+    borderRadius: 20, // Ajusta el valor según tus preferencias
+  },
 };
 
 const theme = createTheme(themeOptions);

@@ -2,7 +2,7 @@ import { Box, Button, Container, Divider } from "@mui/material";
 import React from "react";
 import { imagesWorks } from "../assets/images/images";
 import BasicBreadcrumbs from "../components/BasicBreadcrumbs";
-import { ReusableContentJob } from "../components/ReusableContentJob";
+import { ReusableContentJob } from "../components/ReusableContentJob/ReusableContentJob";
 import Template from "../utils/template";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { HeaderPage } from "../components/HeaderPage";

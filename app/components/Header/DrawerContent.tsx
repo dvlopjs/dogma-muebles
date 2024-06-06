@@ -137,15 +137,15 @@ export const DrawerContent: React.FC<Props> = ({ handleDrawerToggle }) => {
             <strong>
               <LocalPhoneIcon sx={{ fontSize: "1rem" }} />
             </strong>{" "}
-            +5493546477298
+            +54-93546477298
           </Typography>
           <Typography variant="body2">
             <strong>
               <AlternateEmailIcon sx={{ fontSize: "1rem" }} />
             </strong>{" "}
-            contacto@dogmamuebles.com
+            dogmamuebles@hotmail.com
           </Typography>
-          <Typography variant="body2" sx={{ fontSize: "1rem" }}>
+          <Typography variant="body2">
             <strong>
               <FmdGoodIcon sx={{ fontSize: "1rem" }} />
             </strong>{" "}

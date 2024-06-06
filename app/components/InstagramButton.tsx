@@ -7,13 +7,14 @@ type Props = {
 export const InstagramButton: React.FC<Props> = ({ url }) => {
   return (
     <Button
-      variant="outlined"
+      variant="text"
       href={url}
       target="_blank"
       endIcon={<InstagramIcon />}
       size="small"
-      style={{
+      sx={{
         border: "2px solid",
+        // borderRadius: "20%",
         borderImageSlice: 1,
         borderImageSource:
           "linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FFDC80)",
