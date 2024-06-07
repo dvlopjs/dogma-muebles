@@ -9,10 +9,12 @@ import ScrollToTop from "./utils/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "Dogma Muebles",
-  description: "Muebles de calidad a medida.",
+  description:
+    "Muebles de calidad a medida. . Carpintería en melamina, diseños propios y trabajos a medida.",
   openGraph: {
     title: "Dogma Muebles",
-    description: "Muebles de calidad a medida.",
+    description:
+      "Muebles de calidad a medida. Carpintería en melamina, diseños propios y trabajos a medida.",
     url: "https://dogmamuebles.vercel.app/",
     type: "website",
   },

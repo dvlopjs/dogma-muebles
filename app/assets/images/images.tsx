@@ -56,8 +56,8 @@ export const images: { [key: string]: ImageModel[] } = {
     { src: habitacion4, alt: "habitacion4" },
   ],
   otros: [
-    { src: otros7, alt: "Otros1" },
-    { src: otros8, alt: "Otros2" },
+    { src: otros10, alt: "Otros1" },
+    { src: otros11, alt: "Otros2" },
     { src: otros4, alt: "Otros3" },
     { src: otros5, alt: "Otros4" },
   ],
