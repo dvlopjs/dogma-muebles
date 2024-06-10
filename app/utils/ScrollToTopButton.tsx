@@ -15,12 +15,6 @@ const ScrollToTopButton = styled(Button)(({ theme }) => ({
   borderRadius: "50%",
   color: "white",
   minWidth: "auto",
-  // opacity: 0, // Empieza invisible
-  // transition: "opacity 0.3s ease-in-out", // Transición suave para la animación
-  // "&:hover": {
-  //   transform: "scale(1.1)",
-  // },
-
   visibility: "hidden", // Empieza oculto
   transform: "scale(0)", // Empieza escala cero
   transition: "transform 0.3s ease-in-out, visibility 0.3s", // Transición suave para la animación
@@ -47,7 +41,7 @@ const WhatsAppButton = styled(Button)(({ theme }) => ({
 
 const handleWhatsApp = () => {
   // Agrega el enlace de WhatsApp aquí
-  window.location.href = "https://api.whatsapp.com/send?phone=1234567890";
+  window.location.href = "https://wa.me/+5493546477298";
 };
 
 function ScrollToTop() {
