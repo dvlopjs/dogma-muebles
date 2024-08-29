@@ -14,7 +14,7 @@ export const InstagramButton: React.FC<Props> = ({ url }) => {
       size="small"
       sx={{
         border: "2px solid",
-        // borderRadius: "20%",
+        padding: "5px",
         borderImageSlice: 1,
         borderImageSource:
           "linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FFDC80)",
