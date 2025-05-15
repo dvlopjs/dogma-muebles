@@ -12,48 +12,48 @@ interface Props {
 
 export const ToolBarHeader: React.FC<Props> = ({ handleDrawerToggle }) => {
   return (
-    <Container>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          edge="start"
-          onClick={handleDrawerToggle}
-          sx={{ mr: 2, display: { sm: "none" } }}
-        >
-          <MenuIcon />
-        </IconButton>
+    // <Container>
+    <Toolbar sx={{ justifyContent: "space-around" }}>
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="start"
+        onClick={handleDrawerToggle}
+        sx={{ mr: 2, display: { sm: "none" } }}
+      >
+        <MenuIcon />
+      </IconButton>
 
-        <Box sx={{ flexGrow: 1, pt: "0.4rem", pb: "0.4rem" }}>
-          <Link href={"/"}>
-            <Image
-              src={appLogo}
-              priority
-              alt="Dogma Muebles"
-              width={80}
-              height={80}
-              style={{ borderRadius: "50%", cursor: "pointer" }}
-            />
-          </Link>
+      <Box sx={{ pt: "0.4rem", pb: "0.4rem" }}>
+        <Link href={"/"}>
+          <Image
+            src={appLogo}
+            priority
+            alt="Dogma Muebles"
+            width={80}
+            height={80}
+            style={{ borderRadius: "50%", cursor: "pointer" }}
+          />
+        </Link>
+      </Box>
+
+      <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+        <Box pr={1}>
+          <ButtonMenuDropdown />
         </Box>
 
-        <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-          <Box pr={1}>
-            <ButtonMenuDropdown />
-          </Box>
-
-          <Link target="_blank" href={`https://wa.me/+5493546477298`}>
-            <Button
-              startIcon={<WhatsAppIcon />}
-              variant="outlined"
-              color="success"
-              sx={{ color: "#fff" }}
-            >
-              Contactanos
-            </Button>
-          </Link>
-        </Box>
-      </Toolbar>
-    </Container>
+        <Link target="_blank" href={`https://wa.me/+5493546477298`}>
+          <Button
+            startIcon={<WhatsAppIcon />}
+            variant="outlined"
+            color="success"
+            sx={{ color: "#fff" }}
+          >
+            Contactanos
+          </Button>
+        </Link>
+      </Box>
+    </Toolbar>
+    // </Container>
   );
 };
