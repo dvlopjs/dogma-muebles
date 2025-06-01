@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import BackgroundImage from "./assets/images/BackgroundImage.jpg";
+import Link from "next/link";
 
 export const MainSection = () => {
   return (
@@ -26,12 +27,18 @@ export const MainSection = () => {
               hasta baños, hacemos realidad tu visión.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md transition-colors text-base font-medium">
+              <Link
+                href="#trabajos"
+                className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md transition-colors text-base font-medium"
+              >
                 Ver Nuestros Trabajos
-              </button>
-              <button className="border border-white text-white hover:bg-white/10 py-3 px-6 rounded-md transition-colors text-base font-medium">
+              </Link>
+              <Link
+                href="#contacto"
+                className="border border-white text-white hover:bg-white/10 py-3 px-6 rounded-md transition-colors text-base font-medium"
+              >
                 Contactanos
-              </button>
+              </Link>
             </div>
           </div>
         </div>

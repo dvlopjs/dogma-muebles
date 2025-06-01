@@ -1,7 +1,5 @@
 "use client";
-import ImageBackground from "./assets/images/BackgroundImage.jpg";
 import LogoImage from "./assets/images/dogma-logo.jpg";
-import DogmaMain from "./assets/images/DogmaMain.jpg";
 import Image from "next/image";
 import { images } from "./assets/images/cocinas/trabajo1/index";
 import { imagesPlacares } from "./assets/images/habitaciones/trabajo1/index";
@@ -9,11 +7,8 @@ import Link from "next/link";
 import {
   Facebook,
   Instagram,
-  Mail,
-  MapPin,
   Menu,
   MessageCircle,
-  Phone,
   Twitter,
   X,
 } from "lucide-react";
@@ -172,9 +167,6 @@ export default function Home() {
                   Nos especializamos en cocinas a medida, baños, placares y
                   muebles que transforman tu espacio y perduran en el tiempo.
                 </p>
-                <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-md transition-colors">
-                  Conocé Más Sobre Nosotros
-                </button>
               </div>
 
               <div>
