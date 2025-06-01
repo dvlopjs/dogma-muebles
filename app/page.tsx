@@ -155,7 +155,7 @@ export default function Home() {
             <div className="bg-neutral-900/60 backdrop-blur-lg border border-white/10 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] p-8 transition-all duration-300 hover:shadow-[0_6px_40px_rgba(0,0,0,0.5)] grid gap-12 lg:grid-cols-2 items-center">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  Artesanía en Cada Detalle
+                  Estamos en Cada Detalle
                 </h2>
                 <p className="text-lg text-gray-300 mb-6">
                   Durante más de 20 años, hemos creado muebles a medida que
@@ -251,9 +251,9 @@ export default function Home() {
         </section>
         <section id="trabajos" className="py-16 md:py-24 bg-black text-white">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-                Nuestra Artesanía
+            <div className="text-center mb-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-500">
+                Nuestros <span className="text-green-400">Trabajos</span>
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Explorá nuestro portfolio de proyectos de muebles a medida para
@@ -263,15 +263,15 @@ export default function Home() {
 
             {/* Tabs navigation */}
             <div className="flex justify-center mb-8">
-              <div className="inline-flex bg-neutral-800 rounded-md p-1">
+              <div className="flex gap-2 bg-neutral-800 rounded-full p-1 shadow-inner">
                 {["cocinas", "placares", "varios"].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                    className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       activeTab === tab
-                        ? "bg-green-600 text-white"
-                        : "text-gray-300 hover:text-white"
+                        ? "bg-green-500 text-white"
+                        : "text-gray-300 hover:text-white hover:bg-neutral-700"
                     }`}
                   >
                     {tab === "cocinas"
@@ -297,34 +297,6 @@ export default function Home() {
                           fill
                           className="object-cover transition-transform hover:scale-105"
                         />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {activeTab === "banos" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[1, 2, 3, 4, 5, 6].map((item) => (
-                    <div
-                      key={item}
-                      className="bg-neutral-800 rounded-lg overflow-hidden"
-                    >
-                      <div className="relative h-64">
-                        <Image
-                          src={`/placeholder.svg?height=400&width=600&text=Baño+${item}`}
-                          alt={`Diseño de baño ${item}`}
-                          fill
-                          className="object-cover transition-transform hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-medium text-white">
-                          Baño de Lujo {item}
-                        </h3>
-                        <p className="text-sm text-gray-400 mt-1">
-                          Vanitorys y soluciones de almacenamiento a medida
-                        </p>
                       </div>
                     </div>
                   ))}
@@ -423,7 +395,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-medium mb-2">Fabricación</h3>
                 <p className="opacity-90">
-                  Artesanos especializados fabrican cada pieza con precisión.
+                  Fabricamos cada pieza con precisión.
                 </p>
               </div>
 
@@ -534,7 +506,7 @@ export default function Home() {
                 />
               </div>
               <p className="mb-6 text-gray-400">
-                Muebles artesanales hechos para durar toda la vida.
+                Muebles hechos para durar toda la vida.
               </p>
               <div className="flex gap-4">
                 <Link
