@@ -18,9 +18,9 @@ export const MainSection = () => {
           <div className="absolute inset-0 bg-black/70" />
           <div className="container mx-auto absolute inset-0 flex flex-col items-start justify-center text-white px-4 md:px-6">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Muebles Artesanales
+              Muebles
               <br />
-              <span className="text-green-500">Hechos para Durar</span>
+              <span className="text-green-500">Hechos para Durar...</span>
             </h1>
             <p className="mt-6 max-w-md text-lg text-gray-200">
               Muebles a medida fabricados con precisión y pasión. Desde cocinas
