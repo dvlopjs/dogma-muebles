@@ -27,6 +27,8 @@ export default function CardTrabajos({
                   src={item.image.src}
                   alt={`Diseño de cocina ${item}`}
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgB7GrUgAAAAASUVORK5CYII="
                   className="object-cover transition-all duration-700 group-hover:scale-110"
                 />
               </div>
